@@ -1,3 +1,4 @@
+
 ---
 difficulty: 1
 chapter: "Chapter 1: Vue.js Essentials"
@@ -29,3 +30,4 @@ let’s transform them into clickable buttons that allow end users to provide th
 This is an example of what the functionality should look like for the completed exercise. If you’d like to mimic this style, feel free to do so, but it is not required.
 
 ![Finished app in this challenge](https://i.imgur.com/VjiCITj.gif)
+
