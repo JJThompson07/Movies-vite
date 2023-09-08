@@ -1,5 +1,5 @@
 <template>
-  <div class="movie-form w-full flex flex-col p-4 gap-2 text-white bg-gray-700 rounded">
+  <div data-test-id="movie-form" class="movie-form w-full flex flex-col p-4 gap-2 text-white bg-gray-700 rounded-lg border-solid border-4 border-gray-400">
     <div class="movie-form--item flex flex-col gap-1">
       <label for="name">Name</label>
       <input id="name" v-model="value.name" type="text" class="movie-form--input bg-gray-900 outline outline-gray-400 focus:outline-blue-500 py-1 px-3 rounded" required>
@@ -30,10 +30,10 @@
     </div>
     <div class="flex mt-4 justify-between">
       <div class="flex gap-2">
-        <button @click="cancel" class="bg-gray-600 px-2 py-1 rounded">Cancel</button>
-        <button @click="resetForm" class="bg-orange-600 px-2 py-1 rounded">Reset</button>
+        <button id="cancel-form" @click="cancel" class="bg-gray-400 hover:bg-gray-600 form-button">Cancel</button>
+        <button id="reset-form" @click="resetForm" class="bg-orange-400 hover:bg-orange-600 form-button">Reset</button>
       </div>
-      <button @click="submit" class="bg-sky-400 px-2 py-1 rounded">Submit</button>
+      <button id="submit-form" @click="submit" class="bg-sky-400 hover:bg-sky-600 form-button">Submit</button>
     </div>
 
   </div>
@@ -81,3 +81,11 @@ const submit = () => {
   emit('submit', value.value);
 }
 </script>
+
+<style lang="scss" scoped>
+.form {
+  &-button {
+    @apply px-1 py-1 rounded transition-all
+  }
+}
+</style>
